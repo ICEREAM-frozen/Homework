@@ -4,3 +4,6 @@ h1{
     font-style: italic;
     color: blue;
 }
+body{
+    border-image: dashed;
+}
