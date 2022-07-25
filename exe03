@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Homework03</title>
+        <style>
+            h1{
+                height: 100px;
+                width: 100px;
+                text-align: center;
+                border: dashed;
+                background-color: rgb(93, 93, 255);
+                transition-duration: 10s;
+                transition-property: text;
+                transition-property: background-;
+                color:rgb(206, 193, 255)
+            }
+            h1:hover{ }
+        </style>
+    </head>
+    <body>
+        <h1>Hello!</h1>
+    </body>
+</html>
