@@ -5,7 +5,10 @@
         <style>
             @keyframes my-animation{
                 0%{left: 0px}
-                100%{left: 400px;}
+                25%{left: 150px;}
+                50%{left: 300px;}
+                75%{left: 450px;}
+                100%{left: 600px;}
             }
 
             div{
@@ -14,6 +17,9 @@
                 color: aquamarine;
                 background-color: aqua;
                 position: relative;
+                animation-name: my-animation;
+                animation-duration: 20s;
+                animation-fill-mode: backwards;
                 
 
             }
