@@ -41,5 +41,27 @@
                 }
             }
         </script>
+        <hr>
+        <p>Date().getDay() returns day value</p>
+        <button onclick="exDate()">Okay</button>
+        <p id="dayMsg"></p>
+        <script>
+            function exDay(){
+                var dayweek = new Date().getDate;
+                switch(dayweek) {
+                    case 0:
+                        document.getElementById("dayMsg").innerHTML="It is weekend!!";
+                        break;
+                    case 6:
+                        document.getElementById("dayMsg").innerHTML="sleep sleep sleep,weekend"
+                        break;
+                    default:
+                        document.getElementById("dayMsg").innerHTML="oh, is working day"
+                    }
+            }
+        </script>
+        <hr>
+
+        <button onclick="exWeekend"></button>
     </body>
 </html>
