@@ -5,10 +5,41 @@
         <title>JavaScript</title>
     </head>
     <body>
-        <p id="text">HTML+CSS</p>
-        <button type="button" onclick="exfun()">Click!</button>
+        <p><math.ramdom() ramdom number 0 and 1></p>
+        <p id="ex01"></p>
+        <p id="ex02"></p>
         <script>
-            document.getElementById("Text").innnerHTML="JavaScript";
+            var randate;
+            ranDate = Math.random();
+            document.getElementById("exe01").innnerHTML="Ramdom Number"
+
+            if(ranDate > 0.5){
+                document.getElementById("exe02").innnerHTML="Big";
+            }
+
+            else{
+                document.getElementById("exe02").innnerHTML="Small";
+            }
+        </script>
+        <hr>
+        <p>Date().getHours returns hours</p>
+        <button onclick="exDate()">ok</button>
+        <p id="numHour"></p>
+        <p id="msg"></p>
+        <script>
+            function exDate(){
+                var timeHour=new Date().getHours();
+                document.getElementById("numHour").innerHTML=timeHour;
+                if(timeHour<=8){
+                    document.getElementById("msg").innerHTML="Hello, have a nice day!"
+                }
+                else if(timeHour<=16){
+                    document.getElementById("msg").innerHTML="Hello, have a lunch!"
+                }
+                else{
+                    document.getElementById("msg").innerHTML="Good night, have a nice dreams!"
+                }
+            }
         </script>
     </body>
 </html>
