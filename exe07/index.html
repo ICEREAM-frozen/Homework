@@ -22,6 +22,7 @@
             }
         </script>
         <hr>
+
         <p>Date().getHours returns hours</p>
         <button onclick="exDate()">ok</button>
         <p id="numHour"></p>
@@ -43,11 +44,11 @@
         </script>
         <hr>
         <p>Date().getDay() returns day value</p>
-        <button onclick="exDate()">Okay</button>
+        <button onclick="exDay()">Okay</button>
         <p id="dayMsg"></p>
         <script>
             function exDay(){
-                var dayweek = new Date().getDate;
+                var dayweek = new Date().getDay;
                 switch(dayweek) {
                     case 0:
                         document.getElementById("dayMsg").innerHTML="It is weekend!!";
