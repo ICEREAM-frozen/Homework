@@ -2,23 +2,23 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>JavaScript</title>
+        <title>JavaScript Logic statement</title>
     </head>
     <body>
-        <p><math.ramdom() ramdom number 0 and 1></p>
+        <p><math.ramdom() returns ramdom number between 0 and 1></p>
         <p id="ex01"></p>
         <p id="ex02"></p>
         <script>
-            var randate;
+            var ranData;
             ranDate = Math.random();
-            document.getElementById("exe01").innnerHTML="Ramdom Number"
+            document.getElementById("ex01").innnerHTML="Ramdom number is"+ranData;
 
             if(ranDate > 0.5){
-                document.getElementById("exe02").innnerHTML="Big";
+                document.getElementById("ex02").innnerHTML="Big";
             }
 
             else{
-                document.getElementById("exe02").innnerHTML="Small";
+                document.getElementById("ex02").innnerHTML="Small";
             }
         </script>
         <hr>
