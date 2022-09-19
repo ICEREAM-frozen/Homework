@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Application of JavaScript control structure</title>
+    </head>
+    <body>
+
+        <script>
+            var numInput=window.prompt("Please enter a number between 0~100","");
+            do{
+                if(Number(numInput)>75){
+                    window.alert("too Big");
+                    numInput=window.prompt("Please enter a number between 0~100","");
+                }
+                else{
+                    window.alert("too Small");
+                    numInput=window.prompt("Please enter a number between 0~100","");
+                }
+            }while(Number(numInput)!==75)
+            window.alert("right");
+        </script>
+    </body>
+</html>
