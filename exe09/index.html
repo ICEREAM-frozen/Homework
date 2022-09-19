@@ -7,9 +7,10 @@
     <body>
 
         <script>
+            var puzzle=79
             var numInput=window.prompt("Please enter a number between 0~100","");
             do{
-                if(Number(numInput)>75){
+                if(Number(numInput)>puzzle){
                     window.alert("too Big");
                     numInput=window.prompt("Please enter a number between 0~100","");
                 }
@@ -17,7 +18,7 @@
                     window.alert("too Small");
                     numInput=window.prompt("Please enter a number between 0~100","");
                 }
-            }while(Number(numInput)!==75)
+            }while(Number(numInput)!==puzzle)
             window.alert("right");
         </script>
     </body>
