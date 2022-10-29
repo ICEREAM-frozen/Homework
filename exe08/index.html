@@ -22,24 +22,23 @@
 
         <p>Java script for loop using while</p>
         <p id="msg02"></p>
-        <scrip>
-
+        <script>
             var strText02 = "";
             var b = 1;
             var sum02 = 0;
-            while( b <=5)
+            while( b <= 5){
                 sum02 += b;
                 strText02 += "Loop = " + b + ", sum = " + sum02 + "<br>";
                 b++;
             }
             document.getElementById("msg02").innerHTML = strText02;            
         </script>
-        
+
         <hr>
 
         <p>Java script for loop using do...while...</p>
         <p id="msg03"></p>
-        <scrip>
+        <script>
             var strText03 = "";
             var c = 1;
             var sum03 = 0;
@@ -48,16 +47,59 @@
                 strText03 += "Loop = " + c + ", sum = " + sum03 + "<br>";
                 c++;
             }
-            while ( c<= 5 );
+            while ( c <= 5 );
             document.getElementById("msg03").innerHTML = strText03;
             window.alert("text");
-        
         </script>
 
+        <hr>
 
+        <p>Date().getHours show time info</p>
+        <button onclick="exFun()">OK</button>
+        <p id="numHour"></p>
+        <p id="msg04"></p>
+        <script>
+            function exFun(){
+                var timeHour = new Date().getHours();
+                var txtText;
+                txtText = (timeHour > 11) ? "PM":"AM";
+                document.getElementById("numHour").innerHTML = "Hours = " + timeHour;
+                document.getElementById("msg04").innerHTML = "Now is " + txtText;
+            }
+        </script>
 
+        <p id="msg05-1"></p>
+        <p id="msg05-2"></p>
+        <script>
+            var numList = [8, 7, 0, 9, 2, 5, 4, 6, 3, 1];
+            var numSort = numList.sort();
+            var numArray = "";
+            var arrayLen = numList.length;
+            var d;
             
+            for ( d = 0; d < arrayLen; d++){
+                numArray += "numSort[" + d + "] = " + numSort[i] + "<br>";
+            }
+
+            document.getElementById("msg05-1").innerHTML = "arrayLen in numList = " + arrayLen;
+            document.getElementById("msg05-2").innerHTML = numArray;
         </script>
 
+        <p id="msg06-1"></p>
+        <p id="msg06-2"></p>
+        <script>
+            var numList = [8, 7, 0, 9, 2];
+            var numSort = numList.sort();
+            var numArray = "";
+            var arrayLen = numList.length;
+            var e;
+            
+            for ( e in numList){
+                numArray += "numSort[" + e + "] = " + numSort[e] + "<br>";
+            }
+
+            document.getElementById("msg06-1").innerHTML = "arrayLen in numList = " + arrayLen;
+            document.getElementById("msg06-2").innerHTML = numArray;
+        </script>
     </body>
 </html>
