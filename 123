@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Fahrenheit to Celcius</title>
+        <script>
+            function toC(tempF){
+                return (5/9) * (tempF - 32);
+            }
+        </script>
+    </head>
+    <body>
+        <p>Calculate the celsius using Fahrenheit</p>
+        <input type="number" id="inputValue">
+        <button onclick="convertToC()">Convert</button>
+        <p id="ex"></p>
+        <script>
+            function convertToC(){
+                var tempF = Number(document.getElementById("inputValue").value);
+                document.getElementById("ex").innerHTML = "It is " + toC(tempF) + " Celcius";
+            }
+        </script>
+    </body>
+</html>
