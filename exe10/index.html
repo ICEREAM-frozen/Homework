@@ -2,18 +2,25 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Calculate the celsius using Fahrenheit</title>
+        <title>Convert gallon to joules</title>
         <script>
+            function toJoules(numGallon){
+                return (numGallon)/ 383.56;
+            }
 
         </script>
     </head>
     <body>
-        <p>Calculate the celsius using Fahrenheit</p>
-        <input type="number">
+        <p>Convert gallon to joules</p>
+        <input type="number" id="inputNum">
+        <button onclick="converttoJoules()">Convert</button>
+        <p id="anw"></p>
         <script>
-        <button onclick="">Convert</button>
-        document.getElementById("msg").innerHTML="
-        =20 x 0.393701 = 7.87402."
+            function converttoJoules(){
+                var numGallon=Number( document.getElementById("inputNum").value);
+                document.getElementById("anw").innerHTML=" It is " + "toJoules(numGallon)" + "Joules";  
+             }
+
         </script>
     </body>
 </html>
