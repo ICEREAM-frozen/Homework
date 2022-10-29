@@ -4,8 +4,8 @@
         <meta charset="UTF-8">
         <title>Convert gallon to joules</title>
         <script>
-            function toJoules(numGallon){
-                return (5/9) * (tempF - 32);
+            function toJ(numJ){
+                return (numJ) * (383.56);
             }
 
         </script>
@@ -13,12 +13,12 @@
     <body>
         <p>Convert gallon To joules</p>
         <input type="number" id="inputNum">
-        <button onclick="convertToJoules()">Convert</button>
-        <p id="anw"></p>
+        <button onclick="convertToJ()">Convert</button>
+        <p id="ex"></p>
         <script>
-            function convertToJoules(){
-                var numGallon=Number( document.getElementById("inputNum").value);
-                document.getElementById("anw").innerHTML=" It is " + "toJoules(numGallon)" + "Joules";  
+            function convertToJ(){
+                var numJ = Number( document.getElementById("inputNum").value);
+                document.getElementById("ex").innerHTML= " It is " + toJ(numJ) + "Joules";  
              }
 
         </script>
