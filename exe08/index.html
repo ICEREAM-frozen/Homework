@@ -16,5 +16,19 @@
                 strText += "Loop = " + i + ", sum = " + sum + "<br>";
             }
         </script>
+        <hr>
+        <p>Java script for loop using while</p>
+        <p id="msg02"></p>
+        <script>
+            var strText02 = "";
+            var x = 1;
+            var sum02 = 0;
+            while( x <= 5){
+                sum02 += x;
+                strText02 += "Loop = " + x + ", sum = " + sum02 + "<br>";
+                x++;
+            }
+            document.getElementById("msg02").innerHTML = strText02;            
+        </script>
     </body>
 </html>
