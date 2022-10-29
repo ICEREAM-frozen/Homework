@@ -13,10 +13,10 @@
     <body>
         <p>Convert gallon to joules</p>
         <input type="number" id="inputNum">
-        <button onclick="converttoJoules()">Convert</button>
+        <button onclick="convertToJoules()">Convert</button>
         <p id="anw"></p>
         <script>
-            function converttoJoules(){
+            function convertToJoules(){
                 var numGallon=Number( document.getElementById("inputNum").value);
                 document.getElementById("anw").innerHTML=" It is " + "toJoules(numGallon)" + "Joules";  
              }
