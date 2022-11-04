@@ -3,22 +3,9 @@
 <html lang="en">
     <title>Test</title>
 <body>
-    <div id="container"></div>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-    var button = document.createElement('input');
-    button.type = 'button';
-    button.id = 'submit';
-    button.value = 'Submit';
-    button.className = 'btn';
- 
-    button.onclick = function() {
-    // …
-    };
- 
-    var container = document.getElementById('container');
-    container.appendChild(button);
-}, false);
-    </script>
+    <input type="text" placeholder="Enter a Number" id="inputNum">
+    <button onclick="exTriangle();" style="cursor: pointer; border : 2px solid #8d2727;" >Generate Pascal Triangle</button>
+
+
 </body>
 </html>
