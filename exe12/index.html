@@ -5,9 +5,10 @@
     <link rel="stysheet" href="">
 <body>
   <input type="number" id="inputNum">
-  <button onclick="numRow()" >Generate Pascal Triangle 12</button>
-      <h3 id="pascal"></h3>
+  <button onclick="numRow()" >Generate Pascal Triangle 1</button>
+      <div id="pascal"></div>
       <script>
+      function numRow(){
        var i,j,k,l,star="";
        for(i=1;i<="inputNum";i++){
 
@@ -25,10 +26,11 @@
           star+="*";
         }
       }
+    }
        //document.write("<br/>");
        star+="<br/>";
 
-      document.getElementById("pascal").innerHTML=star;
+      document.getElementById("nunRow").innerHTML=star;
       </script>
       
 
