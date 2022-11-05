@@ -8,22 +8,29 @@
   <button onclick="numRow()" >Generate Pascal Triangle</button>
       <h3 id="pascal"></h3>
       <script>
-       var i,j,k,l;
+       var i,j,k,l,star="";
        for(i=1;i<="inputNum";i++){
 
         for(k=1;k<="inputNum"-i;k++){
-          document.write("nbsp;nbsp;")
+          //document.write("nbsp;nbsp;")
+          star+="<span class='k'>*</span>";
         }
 
         for(j=1;j<=i;j++){ 
-          document.write("*");
+          //document.write("*");
+          star+="*";
        }
-        for(l=1;l<=i;l++){
-          document.write("*");
+        for(l=2;l<=i;l++){
+          //document.write("*");
+          star+="*";
         }
       }
-       document.write("<br/>");
+       //document.write("<br/>");
+       star+="<br/>";
+
+      document.getElementById("pascal").innerHTML=star;
       </script>
+      
 
       
       for(x = [inputNum]; x < triangle[i].length; x++)
