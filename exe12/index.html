@@ -3,22 +3,28 @@
 <html lang="en">
     <title>Test</title>
     <link rel="stysheet" href="">
-    <script src="js/script.js"></script>
 <body>
-      <input type="nunmber" placeholder="Enter a Number" id="inputNum">
-      <button onclick="rowNumber()">Generate Pascal Triangle </button>
+  <input name="nRows" type="number" autofocus required/>
+  <button type="button" id="createTriangle">Create triangle</button>
       <h3 id="pascal"></h3>
       <script>
-        function rowNumber(){
-          var nRows;
-          nRows="inputNum"
-          for(var i = 1; i <= nRows; i++) {
-            var newContainer= $('<div/>')
+       $(function () {
+    var nRows;
+    $("#createTriangle").click(function () {
 
-          };
-          var value, levelUpTriangles;
-          
-          for (var j = 1; j <= i; j++) {
+        reset();
+
+        nRows = $("input[name='nRows']").val();
+
+        for (var i = 1; i <= nRows; i++) {
+            var newContainer = $('<div/>', {
+                "id": "container" + i,
+                "class": "container"
+            });
+
+            var value, levelUpTriangles;
+
+            for (var j = 1; j <= i; j++) {
                 if (j > 1 && j < i) {
                     levelUpTriangles = $("#container" + (i - 1)).children();
                     value = parseInt($(levelUpTriangles[(j - 2)]).attr('data-value'), 10) +
@@ -37,6 +43,7 @@
             }
             $("#body-wrap").append(newRow);
         }
+    });
 </script>
 
       
