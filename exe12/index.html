@@ -1,18 +1,19 @@
 
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
     <title>Test</title>
     <link rel="stysheet" href="">
 <body>
   <input type="number" id="inputNum">
   <button onclick="numRow()" >Generate Pascal Triangle </button>
-      <div id="pascal"></div>
+      <p id="pascal"></p>
       <script>
-      function numRow(){
+      function numRow(numR){
        var i,j,k,l,star="";
-       for(i=1;i<="inputNum";i++){
+       var numR = Number( document.getElementById("inputNum").value)
+       for(i=1;i<=numR;i++){
 
-        for(k=1;k<="inputNum"-i;k++){
+        for(k=1;k<=numR-i;k++){
           //document.write("nbsp;nbsp;")
           star+="<span class='k'>*</span>";
         }
