@@ -3,28 +3,13 @@
 <html lang="en">
     <title>Test</title>
     <link rel="stysheet" href="">
+    <script src="exe12/js/script.js"></script>
 <body>
-      <input type="text" placeholder="Enter a Number" id="inputNum">
-      <button onclick="exTriangle();" style="cursor: pointer; border : 2px solid #8d2727;" >Generate Pascal Triangle</button>
+      <input type="nunmber" placeholder="Enter a Number" id="inputNum">
+      <button onclick="rowNumber()">Generate Pascal Triangle</button>
 
-      <div id="display"></div>
-      <script>
-        function exTriangle(){
-          var a,b,c;
-          for (a=1; a<="inputNum"; a++){
-            for(b=1; b<=10; b++)
-
-            for(c=1; c<=10; c++)
-            document.write("*")
-        }
-        document.write("<br/>");
-
-
-        }
-
-        
-
-      </script>
+      <div id="pascal"></div>
+      
 
 
 </body>
