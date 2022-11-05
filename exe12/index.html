@@ -4,47 +4,26 @@
     <title>Test</title>
     <link rel="stysheet" href="">
 <body>
-  <input name="nRows" type="number" autofocus required/>
-  <button type="button" id="createTriangle">Create triangle</button>
+  <input type="number" id="inputNum">
+  <button onclick="numRow()" >Generate Pascal Triangle</button>
       <h3 id="pascal"></h3>
       <script>
-       $(function () {
-    var nRows;
-    $("#createTriangle").click(function () {
+       var i,j,k,l;
+       for(i=1;i<="inputNum";i++){
 
-        reset();
-
-        nRows = $("input[name='nRows']").val();
-
-        for (var i = 1; i <= nRows; i++) {
-            var newContainer = $('<div/>', {
-                "id": "container" + i,
-                "class": "container"
-            });
-
-            var value, levelUpTriangles;
-
-            for (var j = 1; j <= i; j++) {
-                if (j > 1 && j < i) {
-                    levelUpTriangles = $("#container" + (i - 1)).children();
-                    value = parseInt($(levelUpTriangles[(j - 2)]).attr('data-value'), 10) +
-                            parseInt($(levelUpTriangles[(j - 1)]).attr('data-value'), 10);
-                } else {
-                    value = 1;
-                }
-
-                var newTriangle = $('<div/>', {
-                    "id": j,
-                    "class": "triangle " + ifOdd(value),
-                    "data-value": value.toString()
-                });
-
-                var newRow = $(newContainer).append(newTriangle);
-            }
-            $("#body-wrap").append(newRow);
+        for(k=1;k<="inputNum"-i;k++){
+          document.write("nbsp;nbsp;")
         }
-    });
-</script>
+
+        for(j=1;j<=i;j++){ 
+          document.write("*");
+       }
+        for(l=1;l<=i;l++){
+          document.write("*");
+        }
+      }
+       document.write("<br/>");
+      </script>
 
       
       for(x = [inputNum]; x < triangle[i].length; x++)
