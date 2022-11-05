@@ -4,7 +4,7 @@
     <link rel="stysheet" href="">
 <body>
   <input type="number" id="inputNum">
-  <button onclick="numRow()" >aaGenerate Pascal Triangle </button>
+  <button onclick="numRow()" >aGenerate Pascal Triangle </button>
   <p id="pascal"></p>
   <script>
     function numRow(){
@@ -17,7 +17,7 @@
             }
             document.write("<br>")
         }
-        for(let rows = 1; rows <= 10; rows++){
+        for(let rows = 1; rows <= numR; rows++){
             for(star = 10; stars>= row; star--) {
                 document.write(" * ");}
                 document.write("<br>");
