@@ -7,39 +7,40 @@
 <body>
       <input type="nunmber" placeholder="Enter a Number" id="inputNum">
       <button onclick="rowNumber()">Generate Pascal Triangle 789</button>
-
       <h3 id="pascal"></h3>
       <script>
-        function fact(val){
-    var val2 = val-1;
-    for(i = val2; val2 > 0; val2--){
-        val *= val2;
-    }
-    return val;
-}//the function above calculates the factorial of any number passed as an argument
-function comb(n,r){
-    return fact(n)/(fact(n-r)*fact(r))
-}//the fuction above performs "combination" with any 2 values passed as argumets. nCr
-function row(num){
-    var num2 = num;
-    var pascal = document.getElementById("pascal");
-    pascal.innerHTML += "1 ";
-    for(j = 1; j < num2; j++){
-        pascal.innerHTML+= comb(num,j)+" "
-    }
-    return pascal.innerHTML += " 1<br>"
-}//the function above displays a single row. the row it displays is dependent on the value passed into row
-function rowNumber(){
-    pascal.innerHTML = " ";
-    rowN = document.getElementById("inputNum").value;
-    for(k = 1; k <= rowN; k++){
-        row(k)
-    }
-}//the function above displays the pascals triangle to whatever row you want
+        function rowNumber(){
+          var nRows;
+          nRows="inputNum"
+          for(var i = 1; i <= nRows; i++) {
+            var newContainer= $('<div/>')
 
-      </script>
+          };
+          var value, levelUpTriangles;
+          
+          for (var j = 1; j <= i; j++) {
+                if (j > 1 && j < i) {
+                    levelUpTriangles = $("#container" + (i - 1)).children();
+                    value = parseInt($(levelUpTriangles[(j - 2)]).attr('data-value'), 10) +
+                            parseInt($(levelUpTriangles[(j - 1)]).attr('data-value'), 10);
+                } else {
+                    value = 1;
+                }
+
+                var newTriangle = $('<div/>', {
+                    "id": j,
+                    "class": "triangle " + ifOdd(value),
+                    "data-value": value.toString()
+                });
+
+                var newRow = $(newContainer).append(newTriangle);
+            }
+            $("#body-wrap").append(newRow);
+        }
+</script>
+
       
-      for(x = [inputNum]; x < triangle[i].length; x++){
+      for(x = [inputNum]; x < triangle[i].length; x++)
 
 </body>
 </html>
