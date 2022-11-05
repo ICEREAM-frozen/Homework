@@ -1,10 +1,16 @@
 body{
-background-color: black;
-text-decoration-color: aliceblue;
-text-shadow: 8cm;
+    background-color: black;
+    text-decoration-color: aliceblue;
+    text-shadow: 8cm;
 }
 
-button{
+.Go{
+    display: block;
+    margin: 20px auto;
     text-align: center;
-    border-color: burlywood;
-}
+    background-color: none;
+    padding: 12px;
+    font-size: 15px;
+    border-radius: 22px;
+    border-color: rgb(235, 232, 229);
+
