@@ -3,3 +3,8 @@ background-color: black;
 text-decoration-color: aliceblue;
 text-shadow: 8cm;
 }
+
+button{
+    text-align: center;
+    border-color: burlywood;
+}
