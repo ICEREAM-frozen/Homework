@@ -1,7 +1,9 @@
 body{
     background-color: black;
-    text-decoration-color: aliceblue;
-    text-shadow: 8cm;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
 }
 
 .Go{
@@ -18,4 +20,5 @@ body{
 h1{
     text-align: center;
     color:azure;
+    font-family: Poor Story;
 }
