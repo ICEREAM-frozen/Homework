@@ -6,28 +6,35 @@
     <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
-  <form action="" class="Go">
-    <h1>Create Triangle</h1>
-    <input type="number" id="inputNum">
-    <button onclick="numRow()" >Generate Pascal Triangle</button>
-  </form>
-  <p id="pascal"></p>
-  <script>
-    function numRow(){
-        var numR= Number( document.getElementById("inputNum").value);
-        document.write("<center>");
-        for( row=1;row<=numR;row++){
-            //当行数等于1，行数最大值来自输入号码，第一行后自动加一行
-            //一次一个星星，下一次自动加一，几行星星由上面行数决定
-            for(star=1;star<=row;star++){
-                document.write("*")
-            }
-            document.write("<br>")
-        }
-}
-        
-document.getElementById("pascal").innerHTML="";
-
-  </script>
+    <div id="pg1">
+        <form action="" class="Go">
+            <h1>Create Triangle</h1>
+            <input type="number" id="inputNum">
+            <button onclick="numRow()" >Generate Pascal Triangle</button>
+          </form>
+    </div>
+  <div id="pg2">
+    <p id="pascal"></p>
+    <script>
+      function numRow(){
+          var numR= Number( document.getElementById("inputNum").value);
+          document.write("<center>");
+          for( row=1;row<=numR;row++){
+              //当行数等于1，行数最大值来自输入号码，第一行后自动加一行
+              //一次一个星星，下一次自动加一，几行星星由上面行数决定
+              for(star=1;star<=row;star++){
+                  document.write("*")
+              }
+              document.write("<br>")
+          }
+  }
+  <button onclick="pg1()" >Back</button>
+  
+          
+  document.getElementById("pascal").innerHTML="";
+  
+    </script>
+  </div>
+  
 </body>
   </html>
