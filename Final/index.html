@@ -6,17 +6,35 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Just Another Hand|Caveat|Amatic SC|Luckiest Guy|Nanum Pen Script|Covered By Your Grace&amp;effect=neon|3d-float|outline|emboss|shadow-multiple">>
-        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/index.css">
         <script src="js/script.js"></script>
     </head>
     <body>
-        <p>JavaScript for loop</p>
+     <form action="" class="Go">
+        <h1>Create Triangle</h1>
         <input type="number" id="inputNum">
-        <button onclick="exTriangle()" >Generate Pascal Triangle</button>
-     <script>
-       
-     </script>  
-     
+        <button onclick="numRow()" >Generate Pascal Triangle</button>
+      </form>
+      <p id="pascal"></p>
+      <script>
+        function numRow(){
+            var numR= Number( document.getElementById("inputNum").value);
+            document.write("<center>");
+            for( row=1;row<=numR;row++){
+                //当行数等于1，行数最大值来自输入号码，第一行后自动加一行
+                //一次一个星星，下一次自动加一，几行星星由上面行数决定
+                for(star=1;star<=row;star++){
+                    document.write("*")
+                }
+                document.write("<br>")
+            }
+    }
+    <button onclick="back()" >Back</button>
+    
+    
+    document.getElementById("pascal").innerHTML="";
+    
+      </script>
      
     
     </body>
