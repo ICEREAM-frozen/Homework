@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
     <title>Pascal Triangle</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Monoton|Poor Story&amp;effect=fire|3d-float|outline|emboss|shadow-multiple">
 <head>
     <link rel="stylesheet" href="css/index.css">
 </head>
@@ -11,9 +10,10 @@
     <input type="number" id="inputNum">
     <button onclick="numRow()" >Generate Pascal Triangle</button>
   </form>
+  <input type="number" id="inputNum">
+  <button onclick="numRow()" >Generate Pascal Triangle</button>
   <p id="pascal"></p>
   <script>
-    <p id="pascal"></p>
     function numRow(){
         var numR= Number( document.getElementById("inputNum").value);
         document.write("<center>");
@@ -21,14 +21,13 @@
             //当行数等于1，行数最大值来自输入号码，第一行后自动加一行
             //一次一个星星，下一次自动加一，几行星星由上面行数决定
             for(star=1;star<=row;star++){
-                document.write("*")
+                document.write("*");
             }
-            document.write("<br>")
+            document.write("<br>");
         }
 }
         
 document.getElementById("pascal").innerHTML="";
-
   </script>
 </body>
   </html>
