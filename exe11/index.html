@@ -6,7 +6,7 @@
 </head>
 <body>
   <form action="" class="Go">
-    <h1>Create Triangle'</h1>
+    <h1>Create Triangle</h1>
     <input type="number" id="inputNum">
     <button onclick="numRow()" >Generate Pascal Triangle</button>
   </form>
@@ -15,6 +15,7 @@
     function numRow(){
         var numR= Number( document.getElementById("inputNum").value);
         document.write("<center>");
+        document.write ("<bottom>");
         for( row=1;row<=numR;row++){
             //当行数等于1，行数最大值来自输入号码，第一行后自动加一行
             //一次一个星星，下一次自动加一，几行星星由上面行数决定
