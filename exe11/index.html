@@ -13,6 +13,7 @@
 
   <script>
     // symbolTriangle
+    <p id="symbol"></p>
     var sym = d3.symbol().type(d3.symbolTriangle).size(500);
     d3.select("#gfg")
         .append("path")
@@ -30,9 +31,9 @@
             //当行数等于1，行数最大值来自输入号码，第一行后自动加一行
             //一次一个星星，下一次自动加一，几行星星由上面行数决定
             for(star=1;star<=row;star++){
-                document.write("d3.symbolTriangle");
+                document.write("");
             }
-            document.write("<br>");
+            document.getElementById("symbol").innerHTML="";
         }
 }
         
