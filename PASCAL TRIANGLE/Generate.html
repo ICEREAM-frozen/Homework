@@ -1,0 +1,42 @@
+ <!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>PASCAL TRIANGLE</title>
+    <link rel="stylesheet" href="css/style02.css">
+    <link rel="icon" type="image/x-icon" href="img/icon.png">
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="input">
+      <input id="inputNum" type="text" placeholder="Enter number 1 - 50">
+      <button onclick="numRow()" >Generate Pascal Triangle</button>
+      <script>
+          function numRow() {
+              var numR= Number(document.getElementById("inputNum").value);
+              var x = "";
+              var row;
+              var triangle;
+              if (numR <= 50) {
+              document.write('<body style = "background-color: #484848;">')
+              document.write('<center>')
+              for(row=1 ; row <= numR ; row++) {
+                  //当行数等于1，行数最大值来自输入号码，第一行后自动加一行
+                  //一次一个星星，下一次自动加一，几行星星由上面行数决定
+                  for(triangle = 1; triangle <= row; triangle++) {
+                      x += "&#9650";
+                  }
+                  x += "<br>";
+              }
+              document.write('<div style = "position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); user-select: none">' + x + "&#9646" + '</div>');
+            }
+
+            else {
+              window.alert("Please enter number between 1 - 50 !!!");
+            }
+          }
+      </script>
+    </div>
+  </div>
+</body>
+</html>
